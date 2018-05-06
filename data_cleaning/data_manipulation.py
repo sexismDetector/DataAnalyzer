@@ -51,7 +51,7 @@ file1.close()
 sexist_tweets = Data_Query("SELECT * FROM \"Tweets\" where label = 'sexist' ")
 
 for e in range(len(nonsexist_tweets)):
-  nonsexist_tweets[e] = result = re.sub(r"http\S+", "", nonsexist_tweets[e])
+  sexist_tweets[e] = result = re.sub(r"http\S+", "", sexist_tweets[e])
 
 
 file1 = open('sexist_tweets', 'wb')
