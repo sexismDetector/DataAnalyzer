@@ -38,14 +38,25 @@ import pickle
 #%%capture
 nonsexist_tweets = Data_Query("SELECT * FROM \"Tweets\" where label = 'none' ")
 
+for e in range(len(nonsexist_tweets)):
+  nonsexist_tweets[e] = result = re.sub(r"http\S+", "", nonsexist_tweets[e])
+
+file1 = open('nonsexist_tweets', 'wb')
+
+pickle.dump(nonsexist_tweets,file1)
+file1.close()
+
+#####
+
+sexist_tweets = Data_Query("SELECT * FROM \"Tweets\" where label = 'sexist' ")
 
 for e in range(len(nonsexist_tweets)):
   nonsexist_tweets[e] = result = re.sub(r"http\S+", "", nonsexist_tweets[e])
 
 
-file1 = open('nonsexist_tweets', 'wb')
+file1 = open('sexist_tweets', 'wb')
 
-pickle.dump(nonsexist_tweets,file1)
+pickle.dump(sexist_tweets,file1)
 file1.close()
 
 """
