@@ -2,7 +2,7 @@
 Script that makes predictions based on comments
 
 """
-import io
+import sys
 from keras.preprocessing.text import Tokenizer
 from keras import preprocessing
 from keras.preprocessing.sequence import pad_sequences
@@ -29,7 +29,7 @@ model = load_model('sexism_classifier.h5')
 
 while True:
 
-    raw_text = str(io.readline())
+    raw_text = str(sys.stdin.readline())
     input_prediction = model.predict(Tokenize_New_Instance(raw_text, 200))
     print(input_prediction[0][0])
 
