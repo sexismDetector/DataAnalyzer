@@ -29,8 +29,8 @@ model = load_model('sexism_classifier.h5')
 
 while True:
 
-	raw_text = str(stdin.readline())
-	input_prediction = model.predict( Tokenize_New_Instance(raw_text, 200) )
+    raw_text = str(stdin.readline())
+    input_prediction = model.predict( Tokenize_New_Instance(raw_text, 200) )
     print(input_prediction[ 0 ][ 0 ])
 
 
