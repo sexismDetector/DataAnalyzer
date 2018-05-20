@@ -23,7 +23,7 @@ def Tokenize_New_Instance(new_string, text_length):
 	return tokenized_text
  
 
-model = keras.models.load_model('sexism_classifier.h5')
+model =  load_model('/home/acevedo/Yonsei/Data_Mining/DataAnalyzer/src/sexism_classifier.h5')
 
 print("Loading Model Completed")
 
