@@ -1,3 +1,9 @@
+"""
+Script that makes predcitions based on comments
+
+"""
+
+
 
 from keras.preprocessing.text import Tokenizer
 from keras import preprocessing
