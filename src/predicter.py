@@ -8,8 +8,6 @@ from keras import preprocessing
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import load_model
 
-from sys import argv
-
 def Tokenize_New_Instance(new_string, text_length):
 
     new_instance = []
@@ -36,13 +34,3 @@ while True:
     raw_text = first_json["text"]
     input_prediction = model.predict(Tokenize_New_Instance(raw_text, 200))
     print(input_prediction[0][0])
-
-
-
-"""
-raw_text = argv[1]
-print("Given text is "+str( argv[1]))
-print("\n")
-print("Final Result")
-print(input_prediction[0][0])
-"""
