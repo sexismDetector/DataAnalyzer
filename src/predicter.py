@@ -27,7 +27,7 @@ model =  load_model('/home/acevedo/Yonsei/Data_Mining/DataAnalyzer/src/sexism_cl
 
 print("Loading Model Completed")
 
-raw_text = argv[1]
+raw_text = str( argv[1])
 
 print("Given text is "+str( argv[1]))
 
